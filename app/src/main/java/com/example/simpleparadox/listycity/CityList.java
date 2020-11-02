@@ -21,6 +21,12 @@ public class CityList {
         }
         cities.add(city);
     }
+    public void deletetheCity(City city) {
+        if (!hasCity(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
 
     /**
      * This returns a sorted list of cities
